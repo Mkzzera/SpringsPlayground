@@ -1,6 +1,8 @@
-package com.example.playground.customer;
+package com.example.playground.controller;
 
 import com.example.playground.exception.ApiRequestException;
+import com.example.playground.model.Customer;
+import com.example.playground.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

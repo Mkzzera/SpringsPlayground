@@ -1,8 +1,8 @@
-package com.example.playground.customer;
+package com.example.playground.service;
 
-import com.example.playground.customer.Customer;
-import com.example.playground.customer.CustomerRepository;
-import com.example.playground.customer.CustomerService;
+import com.example.playground.model.Customer;
+import com.example.playground.repository.CustomerRepository;
+import com.example.playground.service.CustomerService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,16 +24,18 @@ class CustomerServiceTest {
 
     @BeforeEach
     void setUp() {
+
         underTest = new CustomerService(customerRepository);
     }
 
     @AfterEach
     void tearDown() {
+
         customerRepository.deleteAll();
     }
 
     @Test
-    void getCustomers() {
+    void shouldReturnAllCustomers() {
         // given
         Customer jamila = new Customer(
                 1L,
@@ -57,7 +59,7 @@ class CustomerServiceTest {
     }
 
     @Test
-    void getCustomer() {
+    void shouldReturnCustomerById() {
         // given
         Customer jamila = new Customer(
                 1L,

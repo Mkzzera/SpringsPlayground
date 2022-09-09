@@ -1,5 +1,7 @@
-package com.example.playground.customer;
+package com.example.playground.configuration;
 
+import com.example.playground.repository.CustomerFakeRepository;
+import com.example.playground.repository.CustomerRepo;
 import com.example.playground.infoapp.InfoApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

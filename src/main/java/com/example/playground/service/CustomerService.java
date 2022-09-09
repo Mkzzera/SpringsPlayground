@@ -1,6 +1,8 @@
-package com.example.playground.customer;
+package com.example.playground.service;
 
+import com.example.playground.repository.CustomerRepository;
 import com.example.playground.exception.NotFoundException;
+import com.example.playground.model.Customer;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,12 +16,12 @@ public class CustomerService {
 
     private final CustomerRepository customerRepository;
 
-    List<Customer> getCustomers() {
+     public List<Customer> getCustomers() {
         log.info("getCustomers was called");
         return customerRepository.findAll();
     }
 
-    Customer getCustomer(Long id) {
+    public Customer getCustomer(Long id) {
         return customerRepository
                 .findById(id)
                 .orElseThrow(

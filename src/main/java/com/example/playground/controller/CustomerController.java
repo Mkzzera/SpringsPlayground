@@ -1,5 +1,7 @@
-package com.example.playground.customer;
+package com.example.playground.controller;
 
+import com.example.playground.model.Customer;
+import com.example.playground.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

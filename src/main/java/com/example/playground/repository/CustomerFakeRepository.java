@@ -1,4 +1,6 @@
-package com.example.playground.customer;
+package com.example.playground.repository;
+
+import com.example.playground.model.Customer;
 
 import java.util.Arrays;
 import java.util.List;
